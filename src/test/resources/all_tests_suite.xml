@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Allegro test">
+
+    <test name="Allegro searching test">
+        <classes>
+            <class name="tests.AllegroSearchTest"/>
+        </classes>
+    </test>
+
+</suite>
