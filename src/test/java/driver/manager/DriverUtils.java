@@ -6,7 +6,6 @@ public class DriverUtils {
 
     public static void setInitialConfiguration() {
 
-//        DriverManager.getWebDriver().manage().window().maximize();
         DriverManager.getWebDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         DriverManager.getWebDriver().manage().window().maximize();
 

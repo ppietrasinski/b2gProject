@@ -20,8 +20,6 @@ public class MainPage {
     @FindBy(xpath = "//button[contains(text(), 'dalej')]")
     private WebElement closeInformationPopUpButton;
 
-//    //button[contains(text()='dalej')]
-
     @FindBy(name = "string")
     private WebElement searchInput;
 

@@ -1,7 +1,6 @@
 package waits;
 
 import driver.manager.DriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -20,11 +19,6 @@ public class WaitForElement {
     public static void waitUntilElementIsClickable(WebElement element) {
         WebDriverWait webDriverWait = getWebDriverWait();
         webDriverWait.until(ExpectedConditions.elementToBeClickable(element));
-    }
-
-    public static void waitUntilElementIsAvailableInDOMAndVisible(By by) {
-        WebDriverWait webDriverWait = getWebDriverWait();
-        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
 }

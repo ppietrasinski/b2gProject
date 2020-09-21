@@ -11,7 +11,7 @@ public class AllegroSearchTest extends TestBase
 {
 
     @Test
-    public void firstAllegroTest() {
+    public void allegroSearchTest() {
 
         String searchedProduct = "iPhone 11";
         int percentValue = 23;
