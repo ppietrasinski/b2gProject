@@ -1,4 +1,5 @@
 Treść zadania do wykonania:
+
 Poniżej kroki do zadania z zakresu automatyzacji z wykorzystaniem Selenium oraz języka Java:
  
 1.	wchodzimy na strone www.allegro.pl
@@ -12,10 +13,12 @@ Jak będzie miał Pan/Pani gotowy skrypt, to proszę go wyexportować lub wrzuci
 
 
 Co musimy mieć zainstalowane, aby skrypt działał prawidłowo
+
 1.	Język programowania java
 2.	maven
 
 Struktura skryptu
+
 W pliku src/main/resources/configuration.properties znajduje się konfiguracja testu, kiedy zmienimy wartość local.browser na FIREFOX, testy włączą się w przeglądarce Firefox
 
 W pliku src/main/resources/log4j2.xml znajduje się konfiguracja loggera
@@ -34,14 +37,17 @@ W tej paczce jest też klasa TestHelper w które znajdują się metody pomocnicz
 
 
 O teście
+
 Test zapisany jest w paczce src/test/java/tests/AllegroSearchTest.java w tej klasie znajduje się skrypt który, przy pomocy klas page.object’ów oraz metod z klasy TestHelper wykonuje zadanie.
 Test można było podzielić na mniejsze testy, ale nie zostało to zrobione, aby uniknąć włączania się WebDrivera po raz kolejny tylko po to, aby mogły zostać wykonane potrzebne obliczenia. Zazwyczaj testy powinny być jak najmniejsze, sprawdzające jedną specyficzną funkcjonalność ale w tym konkretnym przypadku mogło by to wydłużyć czas egzekucji testu co nie jest pożądane. Aby test był testem dodano też trzy nadprogramowe asercje do których wykorzystano bibliotekę assertj.
 
 Pliki chromedriver oraz geckodriver
+
 Znajdują się w folderze tools i są zapisane w repozytorium. W pliku configuration.properties znajduje się odniesienie bezpośrednio do tego folderu, przez co test powinien działać bez przeszkód. Wersja chromedrivera wspiera przeglądarkę Chrome w wersji 85
 Geckodriver wspiera przeglądarkę Firefox w wersji 80.0
 
 Aktualnie skrypt działa tak, że:
+
 - włącza się webdriver i następuje jego konfiguracja
 - włącza się strona https://allegro.pl/
 - wyszukiwany jest produkt iPhone 11
@@ -51,11 +57,13 @@ Aktualnie skrypt działa tak, że:
 - dane są wyświetlane w konsoli 
 
 output w konsoli powinien wyglądać tak:
+
 http://prntscr.com/ulasah 
 na czerwono zaznaczone wymagane w zadaniu dane które powinny być wyświetlone w konsoli.
 
 
 O lokatorach
+
 Strona allegro posiada bardzo dziwne lokatory. Są to bardzo złożone klasy i dlatego też głównymi lokatorami użytymi do znajdowania elementów są xpath’y wyszukujące klasy. Generalnie najbardziej pożądanymi lokatorami są id, name, xpath oraz CSSselector ale akurat w tym przypadku najłatwiej było korzystać z xpath’ów
 
 
