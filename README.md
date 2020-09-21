@@ -12,10 +12,13 @@ Poniżej kroki do zadania z zakresu automatyzacji z wykorzystaniem Selenium oraz
 Jak będzie miał Pan/Pani gotowy skrypt, to proszę go wyexportować lub wrzucić gdzieś do Gita i podać linka
 
 
+
 Co musimy mieć zainstalowane, aby skrypt działał prawidłowo
 
 1.	Język programowania java
 2.	maven
+
+
 
 Struktura skryptu
 
@@ -36,15 +39,18 @@ W tej paczce jest też klasa TestHelper w które znajdują się metody pomocnicz
 - w paczce resources znajduje się plik .xml który ma za zadanie wskazać jakie klasy testowe zostaną wykonane po wpisaniu komendy „mnv clean test” w terminalu. To ten plik jest wskazany na sztywno w pliku pom.xml przez co nie ma potrzeby wpisywania ścieżki to pliku z test suit’em. Oczywiście w pliku pom.xml można to zmienić i ustawić możliwość wyboru pliku konfiguracyjnego jednak na potrzeby tego testu nie ma takiej potrzeby
 
 
+
 O teście
 
 Test zapisany jest w paczce src/test/java/tests/AllegroSearchTest.java w tej klasie znajduje się skrypt który, przy pomocy klas page.object’ów oraz metod z klasy TestHelper wykonuje zadanie.
 Test można było podzielić na mniejsze testy, ale nie zostało to zrobione, aby uniknąć włączania się WebDrivera po raz kolejny tylko po to, aby mogły zostać wykonane potrzebne obliczenia. Zazwyczaj testy powinny być jak najmniejsze, sprawdzające jedną specyficzną funkcjonalność ale w tym konkretnym przypadku mogło by to wydłużyć czas egzekucji testu co nie jest pożądane. Aby test był testem dodano też trzy nadprogramowe asercje do których wykorzystano bibliotekę assertj.
 
+
 Pliki chromedriver oraz geckodriver
 
 Znajdują się w folderze tools i są zapisane w repozytorium. W pliku configuration.properties znajduje się odniesienie bezpośrednio do tego folderu, przez co test powinien działać bez przeszkód. Wersja chromedrivera wspiera przeglądarkę Chrome w wersji 85
 Geckodriver wspiera przeglądarkę Firefox w wersji 80.0
+
 
 Aktualnie skrypt działa tak, że:
 
@@ -62,9 +68,11 @@ http://prntscr.com/ulasah
 na czerwono zaznaczone wymagane w zadaniu dane które powinny być wyświetlone w konsoli.
 
 
+
 O lokatorach
 
 Strona allegro posiada bardzo dziwne lokatory. Są to bardzo złożone klasy i dlatego też głównymi lokatorami użytymi do znajdowania elementów są xpath’y wyszukujące klasy. Generalnie najbardziej pożądanymi lokatorami są id, name, xpath oraz CSSselector ale akurat w tym przypadku najłatwiej było korzystać z xpath’ów
+
 
 
 Włączenie skryptu:
