@@ -22,12 +22,11 @@ public class BrowserFactory {
         switch(browserType) {
             case CHROME:
                 System.setProperty("webdriver.chrome.driver", currentUserProjectDir + LocalWebDriverProperties.getChromeWenDriverLocation());
-//                System.setProperty("webdriver.chrome.driver", currentUserProjectDir + "/tools/chromedriver.exe");
 
                 return new ChromeDriver();
             case FIREFOX:
                 System.setProperty("webdriver.gecko.driver", currentUserProjectDir + LocalWebDriverProperties.getFirefoxDriverLocation());
-//                System.setProperty("webdriver.chrome.driver", currentUserProjectDir + "/tools/geckodriver.exe");
+
                 return new FirefoxDriver();
             default:
                 throw new IllegalStateException(MESSAGE_UNKNOWN_BROWSER);
