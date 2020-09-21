@@ -10,7 +10,7 @@ import java.util.List;
 public class AllegroSearchTest extends TestBase
 {
 
-    @Test(priority = 0)
+    @Test
     public void firstAllegroTest() {
 
         String searchedProduct = "iPhone 11";
@@ -27,7 +27,6 @@ public class AllegroSearchTest extends TestBase
         Assertions.assertThat(filteredPlp.isBlackFilterVisible()).isTrue();
 
         TestHelpers helpers = new TestHelpers();
-
         int amountOfProductsSearched = helpers.getAmountOfElementsFromTheList(listOfPricesAsString);
         Double highestPrice = helpers.getHighestPriceAsDoubleFromThePricesList(listOfPricesAsString);
         Double multipliedHighestValue = helpers.addPercentValueToDouble(percentValue, highestPrice);
